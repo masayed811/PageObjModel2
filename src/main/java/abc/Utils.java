@@ -102,16 +102,16 @@ public class Utils extends BasePage {
 
         //get selected value from dropdown
 
-        public  void selectValueFromDropDown(By by, String data){
+        public   void selectValueFromDropDown(By by, String data){
             Select currency = new Select( BasePage.driver.findElement( by ) );
             currency.selectByValue( data );
         }
 
 
 //assert  urll
-    public static void assertURL( ){
+    public static void assertURL( String text){
             String URL = driver.getCurrentUrl();
-        Assert.assertEquals(URL, "expected" );
+        Assert.assertEquals(URL,"text");
 
     }
 

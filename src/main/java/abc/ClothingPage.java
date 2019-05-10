@@ -4,12 +4,22 @@ import org.openqa.selenium.By;
 
 public class ClothingPage extends Utils {
 
-        //  private By _currencyId = By.id( "customerCurrency" );
-        //private By _clothingLink = By.linkText( "Clothing" );
 
         public void verifyUserOnClothingPage() {
 
-                assertURL();
+                assertURL( "https://demo.nopcommerce.com/clothing" );
+        }
+        public  void selectValueLawToHigh() {
+                selectValueFromDropDown( By.id( "products-orderby" ),"https://demo.nopcommerce.com/clothing?orderby=10");
 
         }
+
+
+public  void selectValueHighToLaw() {
+        selectValueFromDropDown( By.id( "products-orderby" ),"https://demo.nopcommerce.com/clothing?orderby=11");
+
+}
+
+
+
 }
